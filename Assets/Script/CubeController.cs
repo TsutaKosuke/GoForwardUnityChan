@@ -33,7 +33,7 @@ public class CubeController : MonoBehaviour
     //課題
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (tag == "Ground" || tag == "Block")
+        if (collision.gameObject.tag == "Ground" || collision.gameObject.tag == "Block")
         {
             AudioSource.PlayClipAtPoint(sound, transform.position);
         }
